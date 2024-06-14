@@ -7,6 +7,7 @@ const placeSection = document.querySelector('.place');
 const wind_speed = document.querySelector('.wind');
 const humidity = document.querySelector('.humidity');
 const descSection = document.querySelector('.description');
+const iconSection = document.querySelector('.icon');
 
 button.addEventListener('click', () => {
     console.log(button);
@@ -42,6 +43,8 @@ const getWeather = (lat, lon) => {
         const wind = json.wind.speed;
         const humiditys = json.main.humidity;
         const description = json.weather[0].description;
+        const icon = json.weather[0].icon;
+        const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
         tempSection.innerText = temperature+`°C`;
         feels_like.innerText = feel+`°C`;
@@ -49,6 +52,7 @@ const getWeather = (lat, lon) => {
         wind_speed.innerText = wind+` m/s`;
         humidity.innerText = humiditys+`%`;
         descSection.innerText = description;
+        iconSection.setAttribute('src', iconURL);
 
         console.log(json);
     })
