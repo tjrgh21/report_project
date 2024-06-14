@@ -1,0 +1,107 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    border-top: 2px solid #85c6f8;
+    padding-bottom: 30px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 910px;
+    height: 700px;
+    border: 1px solid #77b6e6;
+    gap: 5rem;
+}
+
+.button{
+    width: 400px;
+    border: 1px solid rgb(99, 190, 250);
+    border-radius: 10px;
+    padding: 0;
+    height: 60px;
+    background-color: rgb(99, 190, 250);
+}
+
+.button span{
+    font-size: 1.0rem;
+    line-height: 1.375rem;
+    font-weight: bold;
+    color: #fff ;
+}
+
+span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.top{
+    margin-top: 100px;
+}
+
+.mid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.5rem;
+}
+
+.mid_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6rem;
+}
+
+.mid_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6rem;
+}
+
+.sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+}
+
+.sub2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.mid-menu-divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2px;
+    height: 130px;
+    background-color: #b4b4b4;
+}
+
+.mid-menu-divider2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1px;
+    background-color: #b4b4b4;
+}
+
+.place, .temperature, .feels_like,
+.humidity, .wind, .description{
+    font-weight: 700
+}
