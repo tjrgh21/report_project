@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개실1(로그인)</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./img/favicon_48x_icon.ico">
+</head>
+<div class="all">
+        <div class="login_header"></div>
+        <div class="dw"><a href="./calendar.html">
+            <img src="./img/dsu.jpg" alt="logo", style="width: 220px; height: 60px; margin-right: 10px;">
+        </a></div>
+        <div class="loginInner">
+        <div class="input_box">
+            <div class="input_id">
+                <input type="text" class="login_inputs" placeholder="아이디" 
+                id="my_id" onchange="myid()">
+                <script>
+                    function myid(){
+                    let value = document.getElementById('my_id').value;
+                    console.log(`아이디: `+value);
+                    }
+                </script>
+            </div>
+            <div class="input_pw">
+                <input type="password" class="login_inputs" placeholder="비밀번호" id="my_pw" onchange="mypw()">
+            </div>
+            <script>
+                function mypw(){
+                let value = document.getElementById('my_pw').value;
+                console.log(`비밀번호: `+value);
+                }
+            </script>
+        </div>
+        <div class="signinstay">
+            <input type="checkbox" name="signinstay" id="">
+            로그인 상태 유지</div>
+            <div class="loginbutton_box">
+                <button class="login_btn" id="btn"><span style="font-weight: 700;
+                    font-size: 1.1rem;
+                    color: #fff;">로그인</span></button>
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
