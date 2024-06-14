@@ -3,10 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>소개실1</title>
+    <title>소개실1(캘린더)</title>
     <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./weather.css">
     <link rel="icon" href="./img/favicon_48x_icon.ico">
+    <script src='../dist/index.global.js'></script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+    headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+    },
+    initialDate: '2024-06-17',
+      navLinks: true, // can click day/week names to navigate views
+      businessHours: true, // display business hours
+    editable: true,
+    selectable: true,
+    events: [
+        {
+        title: '주간 보고',
+        start: '2024-05-31T12:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '점심 약속',
+        start: '2024-06-06T13:00:00',
+        constraint: 'businessHours'
+        },
+        {
+        title: '주간 보고',
+        start: '2024-06-07T12:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '고급프로그래밍',
+        start: '2024-06-17T09:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '소개실 발표',
+        start: '2024-06-17T13:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '소프트웨어 기초',
+        start: '2024-06-17T15:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '영어3',
+        start: '2024-06-19T12:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '이산 수학',
+        start: '2024-06-20T10:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '교양',
+        start: '2024-06-20T13:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '오픈 소웨',
+        start: '2024-06-20T15:00:00',
+          constraint: 'availableForMeeting', // defined below
+        color: '#257e4a'
+        },
+        {
+        title: '시험 기간',
+        start: '2024-06-17',
+        end: '2024-06-22'
+        },
+        {
+        title: '저녁 약속',
+        start: '2024-06-26T18:00:00'
+        },
+
+        // areas where "Meeting" must be dropped
+        {
+        groupId: 'availableForMeeting',
+        start: '2024-06-06T10:00:00',
+        end: '2024-06-06T16:00:00',
+        display: 'background'
+        },
+        {
+        groupId: 'availableForMeeting',
+        start: '2024-06-07T12:00:00',
+        end: '2024-06-07T14:00:00',
+        display: 'background'
+        },
+
+        // red areas where no events can be dropped
+        {
+        start: '2024-06-17',
+        end: '2024-06-22',
+        overlap: false,
+        display: 'background',
+        color: '#ff9f89'
+        },
+        {
+        start: '2024-06-07',
+        end: '2024-06-08',
+        overlap: false,
+        display: 'background',
+        color: '#ff9f89'
+        },
+        {
+        start: '2024-05-31',
+        end: '2024-06-01',
+        overlap: false,
+        display: 'background',
+        color: '#ff9f89'
+        }
+    ]
+    });
+
+    calendar.render();
+});
+
+</script>
+<style>
+
+body {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#calendar {
+    max-width: 910px;
+    margin: 0 auto;
+}
+
+</style>
 </head>
 <body>
     <div class="layout">
@@ -48,11 +190,17 @@
                             <a class="menu-link" href="./weather.html" style="color: #85c6f8;font-size: larger;">날씨</a>
                         </li>
                     </ul>
-                    
                 </menu>
             </div>
         </div>
         <div class="main">
+            <div id='calendar'></div>
+        </div>
     </div>
+    <script>
+        function update(){
+            alert('업데이트가 필요합니다.');
+        }
+    </script>
 </body>
 </html>
