@@ -5,6 +5,7 @@ const tempSection = document.querySelector('.temperature');
 const feels_like = document.querySelector('.feels_like');
 const placeSection = document.querySelector('.place');
 const wind_speed = document.querySelector('.wind');
+const humidity = document.querySelector('.humidity');
 
 button.addEventListener('click', () => {
     console.log(button);
@@ -38,11 +39,13 @@ const getWeather = (lat, lon) => {
         const feel = json.main.feels_like;
         const place = json.name;
         const wind = json.wind.speed;
+        const humiditys = json.main.humidity;
 
         tempSection.innerText = temperature+`°C`;
         feels_like.innerText = feel+`°C`;
         placeSection.innerText = place;
         wind_speed.innerText = wind+` m/s`;
+        humidity.innerText = humiditys+`%`;
 
         console.log(json);
     })
