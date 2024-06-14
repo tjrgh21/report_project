@@ -67,3 +67,41 @@ span{
     align-items: center;
     margin: 0 6rem;
 }
+
+.sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+}
+
+.sub2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.mid-menu-divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2px;
+    height: 130px;
+    background-color: #b4b4b4;
+}
+
+.mid-menu-divider2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1px;
+    background-color: #b4b4b4;
+}
+
+.place, .temperature, .feels_like,
+.humidity, .wind, .description{
+    font-weight: 700
+}
