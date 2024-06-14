@@ -1,0 +1,35 @@
+body{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+}
+.dw{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_header{
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: right;
+}
+
+.input_id{
+    width: 398px;
+    margin: 0px auto;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.input_pw{
+    width: 398px;
+    margin: 0px auto;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
